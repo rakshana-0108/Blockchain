@@ -1,0 +1,25 @@
+abstract class Bank
+ {
+    abstract void accountDetails();
+    void deposit() {
+        System.out.println("Money credited");
+    }
+}
+
+class IndianBank extends Bank
+ {
+@Override
+void accountDetails() {
+System.out.println("Account details of Indian Bank");
+    }
+}
+
+public class Main
+ {
+    public static void main(String[] args) 
+    {
+        Bank myBank = new IndianBank();
+        myBank.accountDetails();
+        myBank.deposit();
+    }
+}
